@@ -1,0 +1,111 @@
+{
+  "header": {
+    "title": "Senior Frontend Engineer",
+    "subtitle": "Senior Frontend Engineer delivering scalable web applications, enterprise solutions, and fintech platforms. Expert in React, Angular, TypeScript, and modern JavaScript frameworks.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "contact": "Get In Touch"
+  },
+  "about": {
+    "title": "Professional Summary",
+    "paragraph1": "Senior Frontend Engineer with 8+ years of progressive experience in enterprise software development, fintech solutions, and scalable web applications. Proven track record of leading technical initiatives, mentoring development teams, and delivering high-performance applications that serve thousands of users.",
+    "paragraph2": "Core Expertise: Full-stack JavaScript development, React ecosystem, Angular, Vue.js, Node.js, TypeScript, microservices architecture, CI/CD pipelines, Agile/Scrum methodologies, and cloud deployment. Specialized in payment processing systems, blockchain technology, and modern SPA development.",
+    "paragraph3": "Industry Experience: Fintech, Healthcare, E-commerce, Blockchain/Cryptocurrency, Government Services, and Enterprise SaaS platforms."
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "essentials": "Essentials",
+    "frontend": "Frontend Frameworks & Libraries",
+    "mobile": "Mobile Development",
+    "testing": "Testing Frameworks",
+    "monorepo": "Monorepo Tools",
+    "backend": "Backend Technologies",
+    "tools": "Build Tools & Deployment",
+    "utilities": "Other Utilities"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "current": "CURRENT",
+    "positions": {
+      "pitang": {
+        "title": "Senior Full Stack Engineer",
+        "company": "Pitang",
+        "companyLink": "https://www.pitang.com/",
+        "period": "SEP 2022 - CURRENT",
+        "projects": [
+          "Led development of Lucree Payment Platform - Multi-vertical payment processing system serving automotive, healthcare, and construction industries with 99.9% uptime",
+          "Architected company onboarding system with automated KYC/AML compliance workflows",
+          "Built scalable payment link generator processing $2M+ monthly transactions",
+          "Developed P2F document management system with OCR integration and workflow automation",
+          "Created Propig financial management platform serving 500+ SMBs with real-time analytics",
+          "Implemented B3 Digitas cryptocurrency trading infrastructure with blockchain integration",
+          "Built AI-powered content generation platform (Fabulista) using GPT integration",
+          "Developed government services portal for municipal appointment scheduling system"
+        ]
+      },
+      "bbchain": {
+        "title": "Frontend Developer",
+        "company": "BBChain",
+        "companyLink": "https://www.bbchain.com.br/",
+        "period": "OCT 2020 - SEP 2022",
+        "projects": [
+          "Developed Valluri trading platform - Real-time commodity trading system with WebSocket integration processing 10,000+ daily transactions",
+          "Built Bvm12 stock exchange application - Cross-platform trading app (React Native + Web) with live market data feeds",
+          "Created OTC blockchain trading platform - Secure P2P digital asset exchange with smart contract integration",
+          "Architected BlockchainLab SaaS platform - Multi-tenant blockchain network management tool serving enterprise clients",
+          "Led frontend team of 4 developers using Agile methodologies and modern CI/CD practices"
+        ]
+      },
+      "atelie": {
+        "title": "Full Stack Developer",
+        "company": "Ateliê de Software",
+        "companyLink": "https://atelie.software/",
+        "period": "FEB 2019 - OCT 2020",
+        "projects": [
+          "Integrated real-time chat system for Vagas.com - Brazil's leading job portal serving 2M+ monthly users",
+          "Developed Granatum mobile app - Cross-platform financial management solution (React Native) with 50K+ downloads",
+          "Built enterprise financial planning platforms using React, Node.js, and PostgreSQL",
+          "Implemented responsive web solutions for medium and large companies using modern JavaScript frameworks",
+          "Collaborated with design teams using Figma and implemented pixel-perfect UI components"
+        ]
+      },
+      "deal": {
+        "title": "Frontend Developer",
+        "company": "Deal",
+        "companyLink": "https://www.deal.com.br/",
+        "period": "JAN 2020 - JUN 2020",
+        "projects": [
+          "Built Unilever B2B e-commerce platform - Exclusive retailer portal with inventory management and bulk ordering features",
+          "Developed HDI Insurance rewards platform - Points-based catalog system with redemption tracking and user analytics",
+          "Implemented responsive React applications",
+          "Optimized application performance achieving 95+ Lighthouse scores across all metrics"
+        ]
+      },
+      "soitic": {
+        "title": "Full Stack Developer",
+        "company": "Soitic",
+        "companyLink": "https://soitic.com.br/",
+        "period": "NOV 2015 - APR 2017",
+        "projects": [
+          "Led digital transformation of legacy healthcare system - Modernized platform serving 30,000+ medical professionals",
+          "Architected Single Page Application using AngularJS, ASP.NET Web API, and Entity Framework",
+          "Implemented Domain Driven Design (DDD) with N-tier architecture and Test Driven Development (TDD)",
+          "Integrated SQL Server databases with LINQ and Entity Data Model for optimal data access patterns"
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Get In Touch With Me",
+    "subtitle": "Ready to leverage 8+ years of full-stack expertise for your next project? I specialize in scalable web applications, fintech solutions, and enterprise-grade systems that drive business growth.",
+    "button": "Start a Conversation"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  },
+  "language": {
+    "english": "English",
+    "portuguese": "Português"
+  }
+}

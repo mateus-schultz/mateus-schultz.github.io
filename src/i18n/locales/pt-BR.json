@@ -1,0 +1,111 @@
+{
+  "header": {
+    "title": "Engenheiro Frontend Sênior",
+    "subtitle": "Engenheiro Frontend Sênior entregando aplicações web escaláveis, soluções empresariais e plataformas fintech. Especialista em React, Angular, TypeScript e frameworks JavaScript modernos.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "contact": "Entre em Contato"
+  },
+  "about": {
+    "title": "Resumo Profissional",
+    "paragraph1": "Engenheiro Frontend Sênior com mais de 8 anos de experiência progressiva em desenvolvimento de software empresarial, soluções fintech e aplicações web escaláveis. Histórico comprovado de liderar iniciativas técnicas, mentorar equipes de desenvolvimento e entregar aplicações de alto desempenho que atendem milhares de usuários.",
+    "paragraph2": "Especialidades Principais: Desenvolvimento JavaScript full-stack, ecossistema React, Angular, Vue.js, Node.js, TypeScript, arquitetura de microsserviços, pipelines CI/CD, metodologias Agile/Scrum e implantação em nuvem. Especializado em sistemas de processamento de pagamentos, tecnologia blockchain e desenvolvimento de SPAs modernos.",
+    "paragraph3": "Experiência em Setores: Fintech, Saúde, E-commerce, Blockchain/Criptomoedas, Serviços Governamentais e plataformas SaaS empresariais."
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "essentials": "Essenciais",
+    "frontend": "Frameworks e Bibliotecas Frontend",
+    "mobile": "Desenvolvimento Mobile",
+    "testing": "Frameworks de Teste",
+    "monorepo": "Ferramentas Monorepo",
+    "backend": "Tecnologias Backend",
+    "tools": "Ferramentas de Build e Deploy",
+    "utilities": "Outras Utilidades"
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "current": "ATUAL",
+    "positions": {
+      "pitang": {
+        "title": "Engenheiro Full Stack Sênior",
+        "company": "Pitang",
+        "companyLink": "https://www.pitang.com/",
+        "period": "SET 2022 - ATUAL",
+        "projects": [
+          "Liderei o desenvolvimento da Plataforma de Pagamentos Lucree - Sistema de processamento multi-vertical atendendo setores automotivo, saúde e construção com 99,9% de uptime",
+          "Arquitetei um sistema de onboarding empresarial com fluxos automatizados de conformidade KYC/AML",
+          "Construí um gerador escalável de links de pagamento processando mais de R$ 10M em transações mensais",
+          "Desenvolvi um sistema de gestão documental P2F com integração OCR e automação de workflows",
+          "Criei uma plataforma de gestão financeira Propig atendendo mais de 500 PMEs com análises em tempo real",
+          "Implementei infraestrutura de trading de criptomoedas B3 Digitas com integração blockchain",
+          "Construí uma plataforma de geração de conteúdo com IA (Fabulista) usando integração GPT",
+          "Desenvolvi portal de serviços governamentais para sistema de agendamento municipal"
+        ]
+      },
+      "bbchain": {
+        "title": "Desenvolvedor Frontend",
+        "company": "BBChain",
+        "companyLink": "https://www.bbchain.com.br/",
+        "period": "OUT 2020 - SET 2022",
+        "projects": [
+          "Desenvolvi plataforma de trading Valluri - Sistema de negociação de commodities em tempo real com integração WebSocket processando mais de 10.000 transações diárias",
+          "Construi uma aplicação de bolsa de valores Bvm12 - App de trading multiplataforma (React Native + Web) com feeds de dados de mercado ao vivo",
+          "Criei uma plataforma de trading blockchain OTC - Exchange P2P seguro de ativos digitais com integração de contratos inteligentes",
+          "Arquitetei a plataforma SaaS BlockchainLab - Ferramenta multi-tenant de gestão de redes blockchain para clientes empresariais",
+          "Liderei equipe frontend de 4 desenvolvedores usando metodologias Ágeis e práticas modernas de CI/CD"
+        ]
+      },
+      "atelie": {
+        "title": "Desenvolvedor Full Stack",
+        "company": "Ateliê de Software",
+        "companyLink": "https://atelie.software/",
+        "period": "FEV 2019 - OUT 2020",
+        "projects": [
+          "Integrei um sistema de chat em tempo real para Vagas.com - Principal portal de empregos do Brasil atendendo mais de 2M de usuários mensais",
+          "Desenvolvi um app mobile Granatum - Solução multiplataforma de gestão financeira (React Native) com mais de 50K downloads",
+          "Construí plataformas empresariais de planejamento financeiro usando React, Node.js e PostgreSQL",
+          "Implementei soluções web responsivas para empresas de médio e grande porte usando frameworks JavaScript modernos",
+          "Colaborei com equipes de design usando Figma e implementei componentes de UI pixel-perfect"
+        ]
+      },
+      "deal": {
+        "title": "Desenvolvedor Frontend",
+        "company": "Deal",
+        "companyLink": "https://www.deal.com.br/",
+        "period": "JAN 2020 - JUN 2020",
+        "projects": [
+          "Construí uma plataforma e-commerce B2B Unilever - Portal exclusivo para varejistas com gestão de estoque e recursos de pedidos em lote",
+          "Desenvolvi plataforma de recompensas HDI Seguros - Sistema de catálogo baseado em pontos com rastreamento de resgates e análises de usuário",
+          "Implementei aplicações React responsivas",
+          "Otimizei a performance das aplicações alcançando pontuações Lighthouse 95+ em todas as métricas"
+        ]
+      },
+      "soitic": {
+        "title": "Desenvolvedor Full Stack",
+        "company": "Soitic",
+        "companyLink": "https://soitic.com.br/",
+        "period": "NOV 2015 - ABR 2017",
+        "projects": [
+          "Liderei transformação digital de sistema legado de saúde - Plataforma modernizada atendendo mais de 30.000 profissionais médicos",
+          "Arquitetei Single Page Application usando AngularJS, ASP.NET Web API e Entity Framework",
+          "Implementei Domain Driven Design (DDD) com arquitetura N-tier e Test Driven Development (TDD)",
+          "Integrei bancos de dados SQL Server com LINQ e Entity Data Model para padrões otimizados de acesso a dados"
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Entre em contato comigo",
+    "subtitle": "Pronto para aproveitar mais de 8 anos de expertise full-stack no seu próximo projeto? Sou especialista em aplicações web escaláveis, soluções fintech e sistemas de nível empresarial que impulsionam o crescimento dos negócios.",
+    "button": "Iniciar uma Conversa"
+  },
+  "theme": {
+    "light": "Modo Claro",
+    "dark": "Modo Escuro"
+  },
+  "language": {
+    "english": "English",
+    "portuguese": "Português"
+  }
+}
