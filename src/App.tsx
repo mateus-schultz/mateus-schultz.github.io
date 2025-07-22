@@ -10,8 +10,8 @@ const App = () => (
       <Toaster />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/portfolio-mateus" element={<Index />} />
+          <Route path="*" element={<Navigate to="/portfolio-mateus" />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
