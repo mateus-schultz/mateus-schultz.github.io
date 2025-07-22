@@ -5,6 +5,7 @@ type Theme = "light" | "dark";
 interface ThemeContextType {
   theme: Theme;
   toggleTheme: () => void;
+  forceTheme: (theme: Theme) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -42,8 +43,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
+  const forceTheme = (newTheme: Theme) => {
+    setTheme(newTheme);
+  };
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, forceTheme }}>
       {children}
     </ThemeContext.Provider>
   );

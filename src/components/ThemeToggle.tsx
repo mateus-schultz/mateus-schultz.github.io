@@ -12,6 +12,7 @@ export const ThemeToggle = () => {
       onClick={toggleTheme}
       id="theme-toggle"
       aria-label="Theme Toggle"
+      title="Theme"
       className="bg-white/5 border-white/20 text-white hover:bg-white/10 dark:bg-slate-800/50 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-700/50"
     >
       {theme === "light" ? (

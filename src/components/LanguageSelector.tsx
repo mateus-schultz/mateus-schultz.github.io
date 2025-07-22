@@ -21,6 +21,7 @@ export const LanguageSelector = () => {
         <Button
           id="language-selector"
           aria-label="Language Selector"
+          title="Language"
           variant="outline"
           size="icon"
           className="bg-white/5 border-white/20 text-white hover:bg-white/10"
