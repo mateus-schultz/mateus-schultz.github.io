@@ -5,7 +5,6 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: "/portfolio-mateus",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
