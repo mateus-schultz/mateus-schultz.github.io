@@ -4,8 +4,6 @@ import { Education } from "./Education";
 import { Project } from "./Project";
 import { Location } from "./Location";
 import { Skill } from "./Skill";
-import { Contribution } from "./Contribution";
-import { Technology } from "./Technology";
 import { Content } from "./Content";
 
 export type Resume = {
@@ -26,9 +24,6 @@ export type Resume = {
   about: Content[];
   aboutLink: string;
 
-  help: Content[];
-  helpLink: string;
-
   avatar: string;
   avatarLink: string;
 
@@ -39,17 +34,12 @@ export type Resume = {
 
   contact: Contact;
 
-  technologies: Technology[];
-
   experiences: Experience[];
   educations: Education[];
 
   skills: Skill[];
 
   projects: Project[];
-  contributions: Contribution[];
 
   characteristics: string[];
-
-  keywords: string[];
 };

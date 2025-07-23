@@ -1,3 +1,15 @@
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Code2,
+  Rocket,
+  Zap,
+  FileText,
+} from "lucide-react";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,8 +19,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Github, Linkedin, Mail, Code2, Rocket, Zap } from "lucide-react";
-import { useTranslation } from "react-i18next";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageSelector } from "@/components/LanguageSelector";
 
@@ -82,7 +92,7 @@ export default function Portfolio() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://github.com/mateus-schultz" target="_blank">
+            {/* <a href="https://github.com/mateus-schultz" target="_blank">
               <Button
                 variant="outline"
                 size="lg"
@@ -91,7 +101,7 @@ export default function Portfolio() {
                 <Github className="w-5 h-5 mr-2" />
                 {t("header.github")}
               </Button>
-            </a>
+            </a> */}
             <a
               href="https://www.linkedin.com/in/mateus-schultz-980380149/"
               target="_blank"
@@ -105,6 +115,16 @@ export default function Portfolio() {
                 {t("header.linkedin")}
               </Button>
             </a>
+            <Link to="/cv">
+              <Button
+                variant="outline"
+                size="lg"
+                className="bg-white/5 border-white/20 text-white hover:bg-white/10 dark:bg-white/5 dark:border-white/20 dark:text-white dark:hover:bg-white/10 light:bg-white light:border-slate-300 light:text-slate-900 light:hover:bg-slate-50"
+              >
+                <FileText className="w-5 h-5 mr-2" />
+                {t("header.cv")}
+              </Button>
+            </Link>
             <a href="#contact">
               <Button
                 size="lg"

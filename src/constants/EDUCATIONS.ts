@@ -2,24 +2,13 @@ import { Education } from "@/types/resume/Education";
 
 export const EDUCATIONS: Education[] = [
   {
-    company: "Oryol State Technical University (Oryol STU)",
+    company: "Pontifical Catholic University of Minas Gerais (PUC-MG)",
     link: "",
     badges: [],
-    title: "Mathematician. System programmer. Computer science.",
-    logo: undefined,
-    start: "2012",
-    end: "2014",
-    description: `Master's degree in mathematician, system programming and computer science.`,
-  },
-
-  {
-    company: "Oryol State Technical University (Oryol STU)",
-    link: "",
-    badges: [],
-    title: "Mathematician. System programmer. Computer science.",
-    logo: undefined,
-    start: "2007",
-    end: "2012",
-    description: `Bachelor's degree in mathematician, system programming and computer science.`,
+    title: "Computer science.",
+    logo: "/pucminas_logo.jpg",
+    start: "2014",
+    end: "2018",
+    description: `Bachelor's degree in computer science.`,
   },
 ];

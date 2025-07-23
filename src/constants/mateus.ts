@@ -1,158 +1,79 @@
 import { Resume } from "@/types/resume";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaNpm,
-  FaTelegram,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SKILLS } from "./SKILLS";
 import { LOCATIONS } from "./LOCATIONS";
 import { LANGUAGES } from "./LANGUAGES";
 import { EXPERIENCES } from "./EXPERIENCES";
 import { EDUCATIONS } from "./EDUCATIONS";
 import { PROJECTS } from "./PROJECTS";
-import { CONTRIBUTIONS } from "./CONTRIBUTIONS";
-import { TECHNOLOGIES } from "./TECHNOLOGIES";
+
+const LinkedinURL = "https://www.linkedin.com/in/mateus-schultz-980380149/";
 
 export const RESUME: Resume = {
-  firstName: "Dmitrii",
-  lastName: "Selikhov",
-  name: "Dmitrii Selikhov",
-  nick: "DI",
+  firstName: "Mateus",
+  lastName: "Schultz",
+  name: "Mateus Schultz",
+  nick: "",
   gender: "male",
-  nameLink: "https://www.linkedin.com/in/dimetrix",
+  nameLink: LinkedinURL,
 
-  initials: "DS",
-  initialsLink: "https://www.linkedin.com/in/dimetrix",
+  initials: "MS",
+  initialsLink: LinkedinURL,
 
   locations: LOCATIONS,
   languages: LANGUAGES,
 
-  avatar: "/me.jpg",
-  avatarLink: "https://www.linkedin.com/in/dimetrix",
+  avatar: "/Mateus.jpg",
+  avatarLink: LinkedinURL,
 
-  summary: "CTO, Software Architect, Technical Lead",
-  summaryLink: "https://www.linkedin.com/in/dimetrix",
+  summary: "Senior Frontend Engineer",
+  summaryLink: LinkedinURL,
 
   about: [
     {
       description:
-        "With a **Master's degree in Mathematics and Computer Science** and over **15 years of professional experience (including MBA)** in both startups and enterprises, I am a technical strategic leader specializing in guiding products from initial concept to successful launch. I excel in managing teams of up to 100 members, fostering high-performance cultures, and driving innovation. My collaborative leadership style enables me to engage effectively in both technical and business discussions, whether internally or with clients. My expertise spans **AI** and **ML** sectors, leveraging technologies such as JavaScript/TypeScript (React.js, Next.js, Vue.js, Nuxt.js, Svelte, Stencil, Angular) with CSR/SSR/SSG/SPA/PWA, alongside back-end systems using Node.js, Nest.js, Go, Rust, and Move. I am experienced in monolithic, microservices, and serverless architectures deployed on AWS, Azure, and Google Cloud platforms.",
+        "Creative and results-driven Frontend Engineer specialized in React, with proven expertise in developing MVPs and prototyping innovative solutions within agile Labs environments. Adept at transforming business needs into scalable, high-performance web interfaces and user experiences. Skilled in TypeScript, modern JavaScript frameworks, UI/UX best practices, and rapid product iteration. Passionate about clean code architecture, cross-functional collaboration, and continuous learning to deliver digital products that make a real impact.",
     },
     {
       title: "Competencies",
       items: [
-        "Architecture",
-        "Integration Strategy",
-        "0 - 1 Product Development",
-        "API Design and Development",
-        "UI/UX Design and Development",
+        "JavaScript",
+        "Typescript",
+        "HTML",
+        "CSS",
+        "React Native",
+        "React, Next.js, Node.js",
+        "Redux, Zustand, React Query",
+        "Tailwind CSS, Material UI, Mantine, Bootstrap, Chakra UI",
         "Software Development",
-        "Global/Local People Management (Onshore/Offshore)",
-        "Product/Project Management",
-        "Process Structuration and Optimization",
-        "Executive Leadership",
         "Continuous Improvements",
-        "Professional Services",
-      ],
-    },
-    {
-      title: "Stacks",
-      items: [
-        "MERN",
-        "MEAN",
-        "LAMP",
-        "JAM",
-        "MEVN",
-        "PERN",
-        "ROR",
-        "MEEN",
-        "ELK",
-        "WAMP",
-        "XAMPP",
-        "TALL",
-        "PWA",
-        "LEAN",
-        "FARM",
-        "SERN",
       ],
     },
   ],
-  aboutLink: "https://www.linkedin.com/in/dimetrix",
-
-  help: [
-    {
-      title: "1. Technical Strategy and Vision",
-      items: [
-        "Architect and guide the overall technical direction: Define the technological roadmap aligned with the company's goals. This includes selecting the right tech stack, frameworks, and tools to future-proof the organization.",
-        "Research and innovation: Stay updated on emerging technologies and trends to identify opportunities for innovation and competitive advantage.",
-        "Scalability and sustainability: Ensure that technical solutions are scalable and maintainable, promoting a long-term vision for growth.",
-      ],
-    },
-    {
-      title: "2. Team Leadership and Development",
-      items: [
-        "Build and mentor a strong team: Guide the technical team by fostering a culture of learning, innovation, and accountability. Provide mentorship to developers to help them grow their skills and become leaders themselves.",
-        "Efficient collaboration: Establish clear communication channels, set team goals, and ensure proper collaboration between developers, product managers, and stakeholders.",
-        "Hiring and resource management: Lead the recruitment process to bring in talent that fits both technically and culturally. Allocate resources to ensure efficient project delivery.",
-      ],
-    },
-    {
-      title: "3. Project and Product Delivery",
-      items: [
-        "Oversee project execution: Ensure timely and high-quality delivery of products by monitoring development cycles, managing risks, and removing blockers.",
-        "Quality assurance: Enforce best practices in software development, including code reviews, testing, and continuous integration and deployment (CI/CD).",
-        "Align technical efforts with business goals: Balance technical debt with feature development to ensure the team delivers value while maintaining codebase health.",
-      ],
-    },
-  ],
-  helpLink: "https://www.linkedin.com/in/dimetrix",
-
-  website: "https://www.linkedin.com/in/dimetrix",
+  aboutLink: LinkedinURL,
+  website: LinkedinURL,
 
   contact: {
-    website: "https://www.linkedin.com/in/dimetrix",
-    call: "https://calendly.com/dmitry-selikhov",
-    email: "dmitrii.selikhov@gmail.com",
-    phone: "+1 829 957 6440",
-    cv: "https://dmitrii-selikhov.vercel.app/cv.pdf",
-    resume: "https://dmitrii-selikhov.vercel.app/resume.pdf",
-    linkedin: "https://www.linkedin.com/in/dimetrix",
-    github: "https://github.com/idimetrix",
-    npm: "https://www.npmjs.com/~dimetrix",
-    telegram: "https://t.me/dmitrii_selikhov",
-    twitter: "https://x.com/idimetrix",
+    website: LinkedinURL,
+    email: "mateusbrasil1994@hotmail.com",
+    phone: "+55 35 99849-6105",
+    cv: "/mateus_cv.pdf",
+    resume: "/mateus_cv.pdf",
+    linkedin: LinkedinURL,
+    github: "https://github.com/mateus-schultz",
     socials: [
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/dimetrix",
+        url: LinkedinURL,
         icon: FaLinkedin,
       },
       {
         name: "Github",
-        url: "https://github.com/idimetrix",
+        url: "https://github.com/mateus-schultz",
         icon: FaGithub,
-      },
-      {
-        name: "Npm",
-        url: "https://www.npmjs.com/~dimetrix",
-        icon: FaNpm,
-      },
-      {
-        name: "Telegram",
-        url: "https://t.me/dmitrii_selikhov",
-        icon: FaTelegram,
-      },
-      {
-        name: "Twitter",
-        url: "https://x.com/idimetrix",
-        icon: FaTwitter,
       },
     ],
   },
-
-  technologies: TECHNOLOGIES,
 
   experiences: EXPERIENCES,
 
@@ -161,8 +82,6 @@ export const RESUME: Resume = {
   skills: SKILLS,
 
   projects: PROJECTS,
-
-  contributions: CONTRIBUTIONS,
 
   characteristics: [
     "self-motivated",
@@ -173,27 +92,13 @@ export const RESUME: Resume = {
     "honest",
     "fair",
     "hardworking",
-    "energetic",
-    "sociable",
     "purposeful",
     "resourcefulness",
-    "cheerfulness",
     "patience",
     "principles",
     "decisive",
     "careful",
     "friendly",
-    "enjoy learning and teaching",
-  ],
-
-  keywords: [
-    "Dmitrii Selikhov",
-    "Dmitry Selikhov",
-    "idimetrix",
-    "CTO",
-    "Software Architect",
-    "Technical Lead",
-    "JavaScript",
-    "TypeScript",
+    "enjoy learning",
   ],
 };

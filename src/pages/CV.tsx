@@ -16,9 +16,6 @@ import {
   Languages,
   Links,
   Characteristics,
-  Contributions,
-  Technologies,
-  Help,
   Navigations,
 } from "@/components/resume";
 
@@ -93,12 +90,12 @@ export const CV = memo<Props>(({ resume, className, ...rest }) => {
           >
             <div className="flex flex-col gap-1.5">
               <div id="name-summary" className="flex flex-col">
-                <Name resume={resume} className="" />
-                <Summary resume={resume} className="" />
+                <Name resume={resume} />
+                <Summary resume={resume} />
               </div>
 
               <div id="locations">
-                <Locations resume={resume} className="" />
+                <Locations resume={resume} />
               </div>
 
               <div id="contact" className="mt-1.5 flex flex-col gap-3">
@@ -117,49 +114,37 @@ export const CV = memo<Props>(({ resume, className, ...rest }) => {
           {/* Main Content Sections */}
           <div className="flex w-full gap-9 flex-col">
             <section id="about">
-              <About resume={resume} className="" />
-            </section>
-
-            <section id="help" className="hidden">
-              <Help resume={resume} className="" />
-            </section>
-
-            <section id="technologies" className="hidden">
-              <Technologies resume={resume} className="" />
+              <About resume={resume} />
             </section>
           </div>
 
           <section id="experience">
-            <Experience resume={resume} className="" />
+            <Experience resume={resume} />
           </section>
 
           <section id="education">
-            <Education resume={resume} className="" />
+            <Education resume={resume} />
           </section>
 
           <section id="skills">
-            <Skills resume={resume} className="" />
+            <Skills resume={resume} />
           </section>
 
           <section id="languages">
-            <Languages resume={resume} className="" />
+            <Languages resume={resume} />
           </section>
 
           <section id="projects">
-            <Projects resume={resume} className="" />
+            <Projects resume={resume} />
           </section>
 
-          <section id="characteristics" className="hidden">
-            <Characteristics resume={resume} className="" />
-          </section>
-
-          <section id="contributions">
-            <Contributions resume={resume} className="" />
+          <section id="characteristics">
+            <Characteristics resume={resume} />
           </section>
         </div>
 
         <section id="actions">
-          <Actions resume={resume} className="" />
+          <Actions resume={resume} />
         </section>
       </div>
     </div>

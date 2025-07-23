@@ -1,11 +1,12 @@
-import * as htmlToImage from "html-to-image";
 import { HTMLAttributes, useCallback, memo } from "react";
-import { Resume } from "@/types/resume";
-import { cn } from "@/lib/utils";
+import * as htmlToImage from "html-to-image";
 import { FaHome } from "react-icons/fa";
 import { BiSolidFilePng, BiSolidFileJpg } from "react-icons/bi";
 import { PiFileSvgFill } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
 
+import { Resume } from "@/types/resume";
+import { cn } from "@/lib/utils";
 import { RESUME } from "@/constants/mateus";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
@@ -14,12 +15,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 
 // Memoized Actions component with optimized event handlers
 export const Actions = memo<Props>(({ resume, className, ...rest }) => {
-  const homeHandler = useCallback(() => {
-    if (!resume.contact.linkedin) return;
-
-    window.open(resume.contact.linkedin, "_blank");
-  }, [resume.contact.linkedin]);
-
+  const navigate = useNavigate();
   const printHandler = useCallback(() => {
     window.print();
   }, []);
@@ -34,62 +30,46 @@ export const Actions = memo<Props>(({ resume, className, ...rest }) => {
 
   const exportHandler = useCallback(
     (type: "svg" | "png" | "jpg") => async () => {
-      const cv = document.getElementById("cv");
+      try {
+        const cv = document.getElementById("cv");
+        if (!cv) return;
 
-      // const scale = 2
+        let source: string | null = null;
 
-      if (!cv) return;
+        if (type === "svg")
+          source = await htmlToImage.toSvg(cv, {
+            skipFonts: true,
+            backgroundColor: "#ffffff",
+            quality: 1,
+            pixelRatio: 2,
+            style: {},
+          });
+        if (type === "png")
+          source = await htmlToImage.toPng(cv, {
+            skipFonts: true,
+            backgroundColor: "#ffffff",
+            quality: 1,
+            pixelRatio: 2,
+            style: {},
+          });
+        if (type === "jpg")
+          source = await htmlToImage.toJpeg(cv, {
+            skipFonts: true,
+            backgroundColor: "#ffffff",
+            quality: 1,
+            pixelRatio: 2,
+            style: {},
+          });
 
-      // cv.style.zoom = `${scale}`
-
-      // const blob = await htmlToImage.toBlob(cv)
-
-      let source: string | null = null;
-
-      if (type === "svg")
-        source = await htmlToImage.toSvg(cv, {
-          backgroundColor: "#ffffff",
-          quality: 1,
-          pixelRatio: 2,
-          style: {},
-        });
-      if (type === "png")
-        // source = canvas2scale(
-        //    await htmlToImage.toCanvas(cv, {
-        //       backgroundColor: '#ffffff',
-        //       quality: 1,
-        //       style: {},
-        //    }),
-        //    2
-        // ).toDataURL('image/png')
-        source = await htmlToImage.toPng(cv, {
-          backgroundColor: "#ffffff",
-          quality: 1,
-          pixelRatio: 2,
-          style: {},
-        });
-      if (type === "jpg")
-        // source = canvas2scale(
-        //    await htmlToImage.toCanvas(cv, {
-        //       backgroundColor: '#ffffff',
-        //       quality: 1,
-        //       style: {},
-        //    }),
-        //    2
-        // ).toDataURL('image/jpeg')
-        source = await htmlToImage.toJpeg(cv, {
-          backgroundColor: "#ffffff",
-          quality: 1,
-          pixelRatio: 2,
-          style: {},
-        });
-
-      if (source) {
-        const link = document.createElement("a");
-        link.download = `${RESUME.name}.${type}`;
-        link.href = source;
-        link.click();
-        link.remove();
+        if (source) {
+          const link = document.createElement("a");
+          link.download = `${RESUME.name}.${type}`;
+          link.href = source;
+          link.click();
+          link.remove();
+        }
+      } catch (error) {
+        console.error("Error exporting CV:", error);
       }
     },
     [] // RESUME.name is a static import, not a reactive dependency
@@ -105,10 +85,10 @@ export const Actions = memo<Props>(({ resume, className, ...rest }) => {
     >
       <div className="absolute flex gap-[1px] flex-col text-sm font-mono left-full ml-[1px]">
         <button
-          onClick={homeHandler}
+          onClick={() => navigate("/")}
           type="button"
-          aria-label="Go to LinkedIn profile"
-          title="Go to LinkedIn profile"
+          aria-label="Go back"
+          title="Go back"
           className="transition-all bg-white uppercase duration-300 hover:bg-black hover:text-white w-[24px] h-[24px] items-center justify-center flex"
         >
           <FaHome className="h-4 w-4" />

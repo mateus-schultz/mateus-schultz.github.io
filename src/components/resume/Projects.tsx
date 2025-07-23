@@ -40,9 +40,10 @@ export const Project = memo<ProjectProps>(({ project, className, ...rest }) => {
           rel="noopener noreferrer"
           className="font-bold leading-tight hover:underline"
         >
-          {project.title}
+          {project.company}
         </Link>
       </div>
+      {project.title}
       <div
         className="text-sm text-black/80 leading-tight line-clamp-5"
         title={project.description}

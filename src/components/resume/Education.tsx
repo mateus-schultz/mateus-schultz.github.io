@@ -32,6 +32,11 @@ export const Education = memo<Props>(({ resume, className, ...rest }) => {
           >
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-1.5">
+                <img
+                  src={education.logo}
+                  alt={`${education.company} logo`}
+                  className="w-8 h-8 rounded-full"
+                />
                 <Link
                   to={education.link || "#"}
                   target="_blank"

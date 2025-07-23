@@ -33,7 +33,12 @@ const sections: Section[] = [
   { id: "skills", title: "Skills", letter: "S", visible: true },
   { id: "languages", title: "Languages", letter: "L", visible: true },
   { id: "projects", title: "Projects", letter: "P", visible: true },
-  { id: "contributions", title: "Contributions", letter: "C", visible: true },
+  {
+    id: "characteristics",
+    title: "Characteristics",
+    letter: "C",
+    visible: true,
+  },
 ];
 
 // Bug-free Navigations component with comprehensive error handling and React optimizations

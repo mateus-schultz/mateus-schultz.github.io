@@ -9,10 +9,7 @@ export const AVAILABLE_SECTIONS = [
   "skills",
   "languages",
   "projects",
-  "contributions",
-  "technologies",
   "characteristics",
-  "help",
   "actions",
 ] as const;
 
@@ -316,7 +313,8 @@ export const useKeyboardNavigation = (
 
       switch (event.key) {
         case "ArrowDown":
-        case "j": { // Vim-style navigation
+        case "j": {
+          // Vim-style navigation
           event.preventDefault();
           const nextIndex = (currentIndex + 1) % AVAILABLE_SECTIONS.length;
           onNavigate(AVAILABLE_SECTIONS[nextIndex]);
@@ -324,7 +322,8 @@ export const useKeyboardNavigation = (
         }
 
         case "ArrowUp":
-        case "k": { // Vim-style navigation
+        case "k": {
+          // Vim-style navigation
           event.preventDefault();
           const prevIndex =
             currentIndex > 0 ? currentIndex - 1 : AVAILABLE_SECTIONS.length - 1;
