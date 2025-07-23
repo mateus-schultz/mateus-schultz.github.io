@@ -159,7 +159,7 @@ export const PROJECTS: Project[] = [
     logo: undefined,
     start: undefined,
     end: undefined,
-    description: `School system where the school has its registration and requests for student IDs. The student requests the issuance of their school ID.`,
+    description: `School system where the school registers and verifies student ID requests. The student requests the issuance of their student ID and pay.`,
   },
   {
     company: `Pitang`,
