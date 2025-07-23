@@ -13,7 +13,13 @@ export const Links = memo<Props>(({ resume, className, ...rest }) => {
   if (!resume.contact.email && !resume.contact.phone) return null;
 
   return (
-    <div className={cn("flex gap-1.5 items-center", className)} {...rest}>
+    <div
+      className={cn(
+        "flex flex-col md:flex-row gap-1.5 md:items-center",
+        className
+      )}
+      {...rest}
+    >
       {resume.contact.email && (
         <Link
           to={`mailto:${resume.contact.email}`}

@@ -10,7 +10,10 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 // Memoized Avatar component
 export const Avatar = memo<Props>(({ resume, className, ...rest }) => {
   return (
-    <div className={cn("flex cursor-pointer", className)} {...rest}>
+    <div
+      className={cn("flex cursor-pointer justify-center", className)}
+      {...rest}
+    >
       <img
         src={resume.avatar}
         alt={resume.name}

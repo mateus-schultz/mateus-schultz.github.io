@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     logo: undefined,
     start: undefined,
     end: undefined,
-    description: ``,
+    description: `Medical internship management system that automates the creation and distribution of schedules, offering an intuitive interface for students, preceptors, and coordinators. The mobile is restricted to students and preceptors, allowing them to view their schedules and mark attendance.`,
   },
   {
     company: `Pitang`,
@@ -73,7 +73,7 @@ export const PROJECTS: Project[] = [
     logo: undefined,
     start: undefined,
     end: undefined,
-    description: ``,
+    description: `Medical internship management system that automates the creation and distribution of schedules, offering an intuitive interface for students, preceptors, and coordinators. The web is restricted to coordinators, allowing them to create and manage schedules, as well as view attendance.`,
   },
   {
     company: `Pitang`,
@@ -137,7 +137,7 @@ export const PROJECTS: Project[] = [
     logo: undefined,
     start: undefined,
     end: undefined,
-    description: ``,
+    description: `Brazilian government data and information collection system that aims to identify all low-income families in the country for inclusion in social assistance and income redistribution programs.`,
   },
   {
     company: `Pitang`,
@@ -155,11 +155,11 @@ export const PROJECTS: Project[] = [
       "Vite",
       "Shadcn UI",
     ],
-    title: `Carteira de Estudantes`,
+    title: `Carteira de Estudantes (Admin and Student)`,
     logo: undefined,
     start: undefined,
     end: undefined,
-    description: ``,
+    description: `School system where the school has its registration and requests for student IDs. The student requests the issuance of their school ID.`,
   },
   {
     company: `Pitang`,

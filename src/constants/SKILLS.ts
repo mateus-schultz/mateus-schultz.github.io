@@ -4,7 +4,6 @@ const ONE: string[] = [
   "Angular",
   "Radix UI",
   "Headless UI",
-  "Shadcn UI",
   "Claude 4 Sonnet",
   "Claude 3.5 Sonnet",
   "Python",
@@ -13,17 +12,24 @@ const ONE: string[] = [
   "GitHub Actions",
   "MobX",
   "Module Federation",
+  "Java",
 ];
 
 const TWO: string[] = [
   "Webpack",
   "Vercel",
+  "Shadcn UI",
   "Ruby",
   "Ruby on Rails",
   "Apollo GraphQL",
   "Apollo Server",
   "Apollo Client",
   "Microservices",
+  "C#",
+  "SQL Server",
+  "Entity Framework",
+  "ASP.NET",
+  "ASP.NET Core",
 ];
 
 const THREE: string[] = ["Docker"];
@@ -55,33 +61,40 @@ const SIX: string[] = [
   "GitHub",
   "BitBucket",
   "Linux",
-  "Agile",
-  "Scrum",
-  "SASS",
-  "SCSS",
   "TypeScript",
-  "React.js",
+  "Redux Toolkit",
   "React Native",
   "React Router",
-  "Redux",
   "React Context",
   "React Hooks",
-  "Styled Components",
   "Tailwind UI",
   "Tailwind CSS",
+  "Adobe XD",
   "Figma",
   "Zod",
   "Yup",
-  "Web Components",
   "Jest",
   "Mocha",
   "Chai",
   "Azure",
-  "Kanban",
   "CI/CD",
 ];
 
-const SEVEN: string[] = ["HTML5", "CSS3", "Fetch", "RESTful APIs"];
+const SEVEN: string[] = [
+  "HTML5",
+  "CSS3",
+  "Fetch",
+  "React.js",
+  "Styled Components",
+  "Web Components",
+  "Kanban",
+  "Redux Core",
+  "RESTful APIs",
+  "Agile",
+  "Scrum",
+  "SASS",
+  "SCSS",
+];
 
 const EIGHT: string[] = [
   "JavaScript",
