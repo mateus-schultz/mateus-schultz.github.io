@@ -16,7 +16,7 @@ export const EXPERIENCES: Experience[] = [
       {
         title: "Responsibilities",
         description:
-          "Originally hired by BBChain and transferred to Pitang after its acquisition. Working in medium and large companies.",
+          "Originally hired by BBChain and transitioned to Pitang following its acquisition, I work within the Labs team, focused on building MVPs and scalable digital products for clients ranging from startups to enterprise organizations. My role spans frontend engineering and occasional full-stack contributions, adapting quickly to diverse challenges and domains. I work across various industries—finance, education, healthcare, cryptoassets, and public services—delivering fast, reliable solutions under tight deadlines. My ability to shift between technologies and problem spaces helps accelerate innovation and reduce time-to-market.",
       },
       {
         title: "Technologies",
@@ -37,6 +37,7 @@ export const EXPERIENCES: Experience[] = [
           "Vite",
           "Shadcn UI",
           "Next.js",
+          "Nuxt.js",
           "Material UI",
           "Playwright",
           "Flutter",
@@ -70,7 +71,7 @@ export const EXPERIENCES: Experience[] = [
       {
         title: "Responsibilities",
         description:
-          "I have worked on different projects for large companies using front-end technologies.",
+          "At BBChain, a pioneer in corporate blockchain solutions, I contributed to the development of web and mobile applications for large-scale clients across finance, cryptoassets, and enterprise platforms. My role focused on building robust, scalable frontends using modern frameworks and tools, while collaborating with cross-functional teams to deliver secure and high-performance products.",
       },
       {
         title: "Technologies",
@@ -111,7 +112,7 @@ export const EXPERIENCES: Experience[] = [
       {
         title: "Responsibilities",
         description:
-          "Leveraged agile methodologies to transform clients' businesses into technological solutions through the development of web projects.",
+          "I helped transform client needs into digital solutions by applying agile methodologies and modern frontend technologies. I worked on multiple web applications for well-known brands, contributing to the development of scalable, user-focused interfaces that supported business goals across e-commerce, insurance, and loyalty platforms.",
       },
       {
         title: "Technologies",
@@ -131,7 +132,7 @@ export const EXPERIENCES: Experience[] = [
       {
         title: "Responsibilities",
         description:
-          "I've worked on different projects, implementing new solutions for medium and large companies, always using agile techniques for better project management.",
+          "I contributed to the development of digital solutions for medium and large companies across various industries. My role involved implementing new features and building web and mobile applications using modern technologies, always within agile teams focused on delivering value quickly and efficiently.",
       },
       {
         title: "Technologies",
@@ -167,7 +168,7 @@ export const EXPERIENCES: Experience[] = [
       {
         title: "Responsibilities",
         description:
-          "Spearheaded the transformation of legacy software into a cutting-edge solution using modern web technologies. This involved assessing technical feasibility and collaborating with stakeholders to align with market needs. The new solution positively impacted over 30,000 doctors.",
+          "Led the modernization of legacy medical software into a scalable, web-based solution that improved operational efficiency and positively impacted over 30,000 healthcare professionals. Collaborated with stakeholders to assess technical feasibility and align development with market and user needs.",
       },
       {
         title: "Technologies",
