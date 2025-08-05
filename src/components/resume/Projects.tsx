@@ -107,13 +107,13 @@ export const Projects = memo<Props>(({ resume, className, ...rest }) => {
       )}
 
       {!!secondaryProjects.length && (
-        <div className="w-full flex flex-col gap-3 print:hidden">
+        <div className="w-full flex flex-col gap-3">
           <button
             onClick={handleMore}
             type="button"
             aria-label={`Show ${more ? "less" : "more"} projects`}
             aria-expanded={more}
-            className="w-full uppercase border border-border px-1.5 text-sm py-0.5 leading-tight transition-all duration-300 hover:scale-105"
+            className="w-full uppercase border border-border px-1.5 text-sm py-0.5 leading-tight transition-all duration-300 hover:scale-105 print:hidden"
           >
             show {more ? "less" : "more"}
           </button>
