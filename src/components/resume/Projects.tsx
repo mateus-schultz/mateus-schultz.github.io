@@ -14,8 +14,7 @@ interface ProjectProps extends HTMLAttributes<HTMLDivElement> {
   project: Resume["projects"][0];
 }
 
-// Memoized Project component to prevent unnecessary re-renders
-export const Project = memo<ProjectProps>(({ project, className, ...rest }) => {
+export const Project = ({ project, className, ...rest }: ProjectProps) => {
   return (
     <div
       className={cn(
@@ -45,7 +44,7 @@ export const Project = memo<ProjectProps>(({ project, className, ...rest }) => {
       </div>
       {project.title}
       <div
-        className="text-sm text-black/80 leading-tight line-clamp-5"
+        className="text-sm text-black/80 leading-tight line-clamp-5 group-hover:line-clamp-none"
         title={project.description}
       >
         <Markdown>{project.description}</Markdown>
@@ -65,7 +64,7 @@ export const Project = memo<ProjectProps>(({ project, className, ...rest }) => {
       </div>
     </div>
   );
-});
+};
 
 Project.displayName = "Project";
 
