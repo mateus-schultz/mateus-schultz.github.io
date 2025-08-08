@@ -55,7 +55,7 @@ export const RESUME: Resume = {
 
   contact: {
     website: LinkedinURL,
-    email: "mateusbrasil1994@hotmail.com",
+    email: "mateus-schultz@outlook.com",
     phone: "+55 35 99849-6105",
     cv: "/mateus_cv.pdf",
     resume: "/mateus_cv.pdf",

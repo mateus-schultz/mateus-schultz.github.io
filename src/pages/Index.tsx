@@ -259,7 +259,7 @@ export default function Portfolio() {
           </p>
 
           <a
-            href="mailto:mateusbrasil1994@outlook.com"
+            href="mailto:mateus-schultz@outlook.com"
             target="_blank"
             rel="noopener noreferrer"
           >
