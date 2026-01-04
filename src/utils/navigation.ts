@@ -158,55 +158,79 @@ export const useActiveSection = (): SectionId | null => {
         return;
       }
 
-      // Create intersection observer with optimized options
-      const observer = new IntersectionObserver(
-        (entries) => {
-          try {
-            // Find the section with the highest intersection ratio
-            let maxRatio = 0;
-            let activeSectionId: SectionId | null = null;
+      // Function to find the active section based on scroll position
+      const findActiveSection = () => {
+        try {
+          // Check ALL observed sections, not just entries that changed
+          // This fixes the bug where H, P, C weren't highlighting correctly
+          const viewportHeight = window.innerHeight;
+          const scrollTop = window.scrollY;
+          const documentHeight = document.documentElement.scrollHeight;
 
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
-                maxRatio = entry.intersectionRatio;
-                const sectionId = entry.target.id as SectionId;
-                if (AVAILABLE_SECTIONS.includes(sectionId)) {
-                  activeSectionId = sectionId;
+          // If at the very top, always select the first section
+          if (scrollTop < 50) {
+            const firstSection = AVAILABLE_SECTIONS.find((id) =>
+              sectionsRef.current.has(id)
+            );
+            if (firstSection) {
+              setActiveSection(firstSection);
+              return;
+            }
+          }
+
+          // If at the very bottom, select the last visible section
+          if (scrollTop + viewportHeight >= documentHeight - 50) {
+            // Find the last section that exists in our refs
+            for (let i = AVAILABLE_SECTIONS.length - 1; i >= 0; i--) {
+              const sectionId = AVAILABLE_SECTIONS[i];
+              if (sectionsRef.current.has(sectionId)) {
+                setActiveSection(sectionId);
+                return;
+              }
+            }
+          }
+
+          // For middle sections, find the one whose top is closest to viewport top
+          // but still visible (top is above viewport center)
+          let activeSection: SectionId | null = null;
+          const viewportCenter = viewportHeight / 2;
+
+          sectionsRef.current.forEach((element, sectionId) => {
+            const rect = element.getBoundingClientRect();
+            // Section is active if its top is above center and its bottom is below top
+            if (rect.top <= viewportCenter && rect.bottom > 0) {
+              if (AVAILABLE_SECTIONS.includes(sectionId as SectionId)) {
+                // Prefer sections closer to the top of the viewport
+                if (
+                  !activeSection ||
+                  rect.top >
+                    (
+                      sectionsRef.current.get(activeSection) as Element
+                    ).getBoundingClientRect().top
+                ) {
+                  activeSection = sectionId as SectionId;
                 }
               }
-            });
-
-            // If no section is intersecting, find the closest one based on position
-            if (!activeSectionId) {
-              const viewportCenter = window.innerHeight / 2;
-              let closestDistance = Infinity;
-
-              entries.forEach((entry) => {
-                const rect = entry.boundingClientRect;
-                const elementCenter = rect.top + rect.height / 2;
-                const distance = Math.abs(elementCenter - viewportCenter);
-
-                if (distance < closestDistance) {
-                  closestDistance = distance;
-                  const sectionId = entry.target.id as SectionId;
-                  if (AVAILABLE_SECTIONS.includes(sectionId)) {
-                    activeSectionId = sectionId;
-                  }
-                }
-              });
             }
+          });
 
-            if (activeSectionId) {
-              setActiveSection(activeSectionId);
-            }
-          } catch (error) {
-            console.error("Error in intersection observer:", error);
+          if (activeSection) {
+            setActiveSection(activeSection);
           }
+        } catch (error) {
+          console.error("Error finding active section:", error);
+        }
+      };
+
+      // Create intersection observer with optimized options
+      const observer = new IntersectionObserver(
+        () => {
+          findActiveSection();
         },
         {
           // Optimize for better performance
           root: null,
-          rootMargin: "-20% 0px -20% 0px", // Only trigger when section is well into viewport
+          rootMargin: "0px",
           threshold: [0, 0.1, 0.25, 0.5, 0.75, 1.0], // Multiple thresholds for accuracy
         }
       );
@@ -218,22 +242,29 @@ export const useActiveSection = (): SectionId | null => {
 
       observerRef.current = observer;
 
-      // Set initial active section
-      const initialSection = getCurrentSectionFromHash();
-      if (initialSection && sectionsRef.current.has(initialSection)) {
-        setActiveSection(initialSection);
-      } else if (sectionElements.length > 0) {
-        // Default to first section if no hash
-        const firstSectionId = sectionElements[0].id as SectionId;
-        if (AVAILABLE_SECTIONS.includes(firstSectionId)) {
-          setActiveSection(firstSectionId);
+      // Also listen to scroll events to catch edge cases
+      window.addEventListener("scroll", findActiveSection, { passive: true });
+
+      // Initial check
+      findActiveSection();
+
+      // Capture ref values for cleanup
+      const currentObserver = observer;
+      const currentSections = sectionsRef.current;
+
+      return () => {
+        window.removeEventListener("scroll", findActiveSection);
+        if (currentObserver) {
+          currentObserver.disconnect();
         }
-      }
+        observerRef.current = null;
+        currentSections.clear();
+      };
     } catch (error) {
       console.error("Failed to setup intersection observer:", error);
 
       // Fallback to scroll-based detection if IntersectionObserver fails
-      const handleScroll = () => {
+      const fallbackHandleScroll = () => {
         try {
           const scrollPosition = window.scrollY + window.innerHeight / 2;
           let closestSection: SectionId | null = null;
@@ -256,8 +287,8 @@ export const useActiveSection = (): SectionId | null => {
           if (closestSection) {
             setActiveSection(closestSection);
           }
-        } catch (error) {
-          console.error("Error in scroll fallback:", error);
+        } catch (err) {
+          console.error("Error in scroll fallback:", err);
         }
       };
 
@@ -266,7 +297,7 @@ export const useActiveSection = (): SectionId | null => {
       const throttledScroll = () => {
         if (!ticking) {
           requestAnimationFrame(() => {
-            handleScroll();
+            fallbackHandleScroll();
             ticking = false;
           });
           ticking = true;
@@ -274,20 +305,14 @@ export const useActiveSection = (): SectionId | null => {
       };
 
       window.addEventListener("scroll", throttledScroll, { passive: true });
-      handleScroll(); // Initial call
+      fallbackHandleScroll(); // Initial call
 
+      const fallbackSections = sectionsRef.current;
       return () => {
         window.removeEventListener("scroll", throttledScroll);
+        fallbackSections.clear();
       };
     }
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-        observerRef.current = null;
-      }
-      sectionsRef.current.clear();
-    };
   }, []);
 
   return activeSection;

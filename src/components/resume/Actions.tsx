@@ -1,6 +1,5 @@
 import { HTMLAttributes, useCallback, memo } from "react";
 import * as htmlToImage from "html-to-image";
-import { FaHome } from "react-icons/fa";
 import { BiSolidFilePng, BiSolidFileJpg } from "react-icons/bi";
 import { PiFileSvgFill } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
@@ -84,15 +83,6 @@ export const Actions = memo<Props>(({ resume, className, ...rest }) => {
       {...rest}
     >
       <div className="absolute flex gap-[1px] flex-col text-sm font-mono left-full ml-[1px]">
-        <button
-          onClick={() => navigate("/")}
-          type="button"
-          aria-label="Go back"
-          title="Go back"
-          className="transition-all bg-white uppercase duration-300 hover:bg-black hover:text-white w-[24px] h-[24px] items-center justify-center flex"
-        >
-          <FaHome className="h-4 w-4" />
-        </button>
         <button
           onClick={printHandler}
           type="button"

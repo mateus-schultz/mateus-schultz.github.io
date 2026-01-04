@@ -10,6 +10,8 @@ const skillsByYears: { [key: number]: string[] } = {
     "Angular",
     "Radix UI",
     "Headless UI",
+    "Opus 4.5",
+    "Claude 4.5 Sonnet",
     "Claude 4 Sonnet",
     "Claude 3.5 Sonnet",
     "Python",
