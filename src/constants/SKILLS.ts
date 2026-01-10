@@ -4,12 +4,13 @@ interface Skill {
 }
 
 const skillsByYears: { [key: number]: string[] } = {
-  0: [],
+  0: ["framer-motion", "react-spring", "Vue.js", "Nuxt.js"],
   1: [
     "Angular.js",
     "Angular",
     "Radix UI",
     "Headless UI",
+    "Nest.js",
     "Opus 4.5",
     "Claude 4.5 Sonnet",
     "Claude 4 Sonnet",
@@ -39,17 +40,7 @@ const skillsByYears: { [key: number]: string[] } = {
     "ASP.NET Core",
   ],
   3: ["Docker"],
-  4: [
-    "Next.js",
-    "Vue.js",
-    "Nuxt.js",
-    "Nest.js",
-    "React Query",
-    "Zustand",
-    "Vite",
-    "Rollup",
-    "PostgreSQL",
-  ],
+  4: ["Next.js", "React Query", "Zustand", "Vite", "Rollup", "PostgreSQL"],
   5: [
     "GitLab",
     "YARN",
