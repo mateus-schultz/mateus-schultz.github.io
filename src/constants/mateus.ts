@@ -32,7 +32,7 @@ export const RESUME: Resume = {
   about: [
     {
       description:
-        "Creative and results-driven Frontend Engineer specialized in React, with proven expertise in developing MVPs and prototyping innovative solutions within agile Labs environments. Adept at transforming business needs into scalable, high-performance web interfaces and user experiences. Skilled in TypeScript, modern JavaScript frameworks, UI/UX best practices, and rapid product iteration. Passionate about clean code architecture, cross-functional collaboration, and continuous learning to deliver digital products that make a real impact.",
+        "I’m a frontend developer focused on building simple, reliable, and user‑friendly interfaces. My main experience is with React, TypeScript, Next.js, and TailwindCSS, and I’ve also explored Angular and Vue/Nuxt in side projects. I’m responsible, collaborative, and make sure the work gets done while keeping performance, accessibility, and responsive design in mind. Recently, I’ve been using AI tools like Claude and LLMs to accelerate development and deliver solid products with the team.",
     },
     {
       title: "Competencies",

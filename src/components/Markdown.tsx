@@ -47,6 +47,7 @@ export const Markdown = memo<Props>(({ children, className, ...rest }) => {
             h4: ({ children }) => <h4 className="font-bold">{children}</h4>,
             h5: ({ children }) => <h5 className="font-bold">{children}</h5>,
             h6: ({ children }) => <h6 className="font-bold">{children}</h6>,
+            br: () => <br />,
           }}
         >
           {children}

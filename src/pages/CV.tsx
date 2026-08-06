@@ -29,7 +29,7 @@ export const CV = memo<Props>(({ resume, className, ...rest }) => {
     <div
       className={cn(
         "page flex relative justify-center bg-zinc-500 print:bg-none",
-        className
+        className,
       )}
       {...rest}
     >
@@ -126,9 +126,9 @@ export const CV = memo<Props>(({ resume, className, ...rest }) => {
             <Education resume={resume} />
           </section>
 
-          <section id="skills">
+          {/* <section id="skills">
             <Skills resume={resume} />
-          </section>
+          </section> */}
 
           <section id="languages">
             <Languages resume={resume} />

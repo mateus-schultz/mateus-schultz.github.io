@@ -17,7 +17,7 @@ export const Experience = memo<Props>(({ resume, className, ...rest }) => {
     (experience: Resume["experiences"][0], index: number) => {
       return `experience-${experience.company}-${index}`;
     },
-    []
+    [],
   );
 
   return (
@@ -63,7 +63,9 @@ export const Experience = memo<Props>(({ resume, className, ...rest }) => {
                 <div key={`${content.title}-${contentIndex}`}>
                   <b>{content.title}:</b>{" "}
                   {content.description && (
-                    <Markdown>{content.description}</Markdown>
+                    <Markdown className="whitespace-pre-line">
+                      {content.description}
+                    </Markdown>
                   )}
                   {content.items && content.items.length > 0 && (
                     <span> {content.items.join(" • ")}</span>

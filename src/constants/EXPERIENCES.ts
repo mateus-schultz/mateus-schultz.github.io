@@ -16,7 +16,8 @@ export const EXPERIENCES: Experience[] = [
       {
         title: "Responsibilities",
         description:
-          "Originally hired by BBChain and transitioned to Pitang following its acquisition, I work within the Labs team, focused on building MVPs and scalable digital products for clients ranging from startups to enterprise organizations. My role spans frontend engineering and occasional full-stack contributions, adapting quickly to diverse challenges and domains. I work across various industries—finance, education, healthcare, cryptoassets, and public services—delivering fast, reliable solutions under tight deadlines. My ability to shift between technologies and problem spaces helps accelerate innovation and reduce time-to-market.",
+          "BBChain → Pitang (via acquisition)\nI design and build scalable digital products, from MVPs to production-ready solutions, for clients ranging from startups to enterprise organizations. My role spans frontend engineering with occasional full‑stack contributions, adapting quickly to diverse domains and technologies.\nOver the past year, I’ve focused on projects leveraging AI/LLMs (Claude, MCP servers, and related tooling) to deliver intelligent, user‑centric applications. This work has sharpened my ability to integrate cutting‑edge AI into frontend experiences, bridging complex backend models with intuitive, accessible interfaces.\nI’ve delivered solutions across industries including finance, education, healthcare, cryptoassets, and public services, consistently meeting tight deadlines while accelerating innovation and reducing time‑to‑market.",
+        // "Originally hired by BBChain and transitioned to Pitang following its acquisition, I work within the Labs team, focused on building MVPs and scalable digital products for clients ranging from startups to enterprise organizations. My role spans frontend engineering and occasional full-stack contributions, adapting quickly to diverse challenges and domains. I work across various industries—finance, education, healthcare, cryptoassets, and public services—delivering fast, reliable solutions under tight deadlines. My ability to shift between technologies and problem spaces helps accelerate innovation and reduce time-to-market.",
       },
       {
         title: "Technologies",
@@ -26,7 +27,9 @@ export const EXPERIENCES: Experience[] = [
           "JavaScript",
           "TypeScript",
           "React",
-          "AI (LLM)",
+          "Claude Code",
+          "Claude Skills",
+          "LLM",
           "Lovable",
           "React Query",
           "Tailwind CSS",
